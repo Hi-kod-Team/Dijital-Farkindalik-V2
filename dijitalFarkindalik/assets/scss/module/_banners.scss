@@ -1,0 +1,23 @@
+/*-----------------------
+    banner
+------------------------*/
+
+@media (min-width:1200px) {
+
+    .banner-layout1,
+    .banner-layout2 {
+        .inner-padding {
+            padding: 100px 70px 110px;
+        }
+    }
+}
+
+@media (min-width:1600px) {
+
+    .banner-layout1,
+    .banner-layout2 {
+        .inner-padding {
+            padding: 100px 110px 110px;
+        }
+    }
+}

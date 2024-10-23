@@ -1,0 +1,299 @@
+/*-------------------------
+    Footer
+--------------------------*/
+.footer {
+    .footer-primary {
+        padding-top: 125px;
+        padding-bottom: 75px;
+        background-color: #161616;
+    }
+
+    .footer-secondary {
+        position: relative;
+        padding: 36px 0 30px;
+    }
+
+    [class*="footer-widget"] {
+        margin-bottom: 30px;
+    }
+
+    .footer-widget__title {
+        color: $color-white;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-bottom: 37px;
+    }
+
+    .contact__list li {
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-family: $font-primary;
+            white-space: nowrap;
+            font-size: 20px;
+            line-height: 1;
+
+            &:hover {
+                color: $color-white;
+            }
+
+            .contact__icon {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .btn__primary {
+        &::before {
+            background-color: $color-white !important;
+        }
+
+        &:hover {
+            color: $color-primary !important;
+        }
+    }
+
+    .underlined__link {
+        color: $color-accent;
+        border-bottom: 1px solid $color-accent;
+
+        &:hover {
+            color: $color-white;
+            border-bottom: 1px solid $color-white;
+        }
+    }
+
+    .footer-widget-nav li a {
+        display: block;
+        position: relative;
+        color: $color-body;
+        margin-bottom: 11px;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    .footer__copyrights {
+        margin-bottom: 5px;
+    }
+
+    .footer__copyright-links li {
+        a {
+            position: relative;
+            color: $color-secondary;
+            display: block;
+            margin-right: 25px;
+            padding: 3px 0;
+
+            &:hover {
+                color: $color-primary;
+            }
+
+            &:before {
+                content: '-';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -13px;
+                color: $color-secondary;
+            }
+        }
+
+        &:last-child a {
+            margin-right: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .social-icons li a {
+        border: 2px solid rgba(234, 234, 234, 0.15);
+
+        i {
+            color: $color-secondary;
+            background-color: $color-primary;
+        }
+
+        &:hover {
+            border-color: $color-white;
+            background-color: transparent;
+
+            i {
+                color: $color-white;
+            }
+        }
+    }
+
+    .footer-scroll {
+        background-color: #282828;
+    }
+}
+
+.phone__number {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    font-weight: 700;
+
+    .phone__icon {
+        position: relative;
+        padding: 5px;
+        border-radius: 50%;
+        margin-right: 12px;
+        box-shadow: 0 0 0 2px rgba($color-primary, 0.5);
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: ripple 3s infinite;
+            box-shadow: 0 0 0 2px rgba($color-primary, 0.5);
+        }
+
+        .icon-phone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            flex: 0 0 45px;
+            border-radius: 50%;
+            color: $color-white;
+            background-color: $color-primary;
+        }
+    }
+
+    .phone__link {
+        font-family: $font-primary;
+        font-weight: 500;
+        font-size: 20px;
+        white-space: nowrap;
+        margin-bottom: 5px;
+    }
+
+    .email__link {
+        font-size: 14px;
+    }
+
+    &-light {
+        color: $color-white;
+
+        .phone__link {
+            color: $color-white;
+        }
+
+        .phone__icon {
+            box-shadow: 0 0 0 2px rgba($color-white, 0.5);
+
+            &:before {
+                box-shadow: 0 0 0 2px rgba($color-white, 0.5);
+            }
+
+            .icon-phone {
+                color: $color-primary;
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+    width: 100px;
+    height: 90px;
+    font-size: 18px;
+    border-radius: 0;
+    margin-top: -20px;
+    text-align: center;
+    color: $color-white;
+    background-color: #282828;
+    @include prefix(transition, all .3s ease-in-out, webkit moz ms o);
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-primary;
+    }
+
+    .scroll__text {
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer {
+        .footer-widget-contact {
+            padding-right: 30px;
+        }
+
+        .contact__list li a .contact__icon {
+            position: absolute;
+            left: -35px;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@media (min-width: 320px) and (max-width: 1200px) {
+    .footer {
+        .footer-primary {
+            padding-top: 35px;
+            padding-bottom: 30px;
+        }
+
+        .footer-secondary {
+            padding: 20px 0 15px;
+        }
+
+        .footer-widget {
+            margin-bottom: 20px;
+        }
+
+        .footer-widget__title {
+            margin-bottom: 15px;
+        }
+
+        .footer-widget-nav li a {
+            font-size: 13px;
+        }
+
+        .footer-widget-social {
+            text-align: left !important;
+
+            .social-icons {
+                justify-content: flex-start !important;
+            }
+        }
+    }
+}
+
+/* Mobile Phones */
+@include xs-sm-screens {
+    #scrollTopBtn {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 2px;
+
+        .scroll__text {
+            display: none;
+        }
+    }
+}

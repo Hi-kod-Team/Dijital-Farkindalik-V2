@@ -1,0 +1,421 @@
+/*----------------------------
+    Contact
+----------------------------*/
+.contact-info {
+    .boxes-wrapper {
+        position: relative;
+        z-index: 3;
+        margin-top: -40px;
+        overflow: hidden;
+        border-radius: 10px;
+
+        >[class*="col-"] {
+            &:nth-of-type(1) {
+                .contact-box {
+                    background-color: $color-primary;
+                }
+            }
+
+            &:nth-of-type(2) {
+                .contact-box {
+                    background-color: #3851a2;
+                }
+            }
+
+            &:nth-of-type(3) {
+                .contact-box {
+                    background-color: #2d4990;
+                }
+            }
+        }
+    }
+
+    .contact-box {
+        position: relative;
+        padding: 45px;
+        height: 100%;
+
+        .contact__title {
+            font-size: 19px;
+        }
+
+        .contact__icon {
+            font-size: 50px;
+            flex: 0 0 80px;
+            max-width: 80px;
+        }
+
+        .contact__title,
+        .contact__icon,
+        .time__list li,
+        .contact__desc {
+            color: $color-white;
+        }
+
+        .phone__number {
+            font-size: 23px;
+            margin-top: 5px;
+            font-weight: 600;
+            color: $color-white !important;
+
+            .icon-phone {
+                font-size: 17px;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 50%;
+                text-align: center;
+                margin-right: 10px;
+                background-color: #1ebaae;
+            }
+        }
+
+        .btn__white.btn__outlined {
+            height: 42px;
+            border: 1px solid rgba($color-white, 0.25);
+        }
+    }
+}
+
+.contact-panel {
+    position: relative;
+    z-index: 2;
+    padding: 70px;
+    border-radius: 5px;
+    background-color: $color-white;
+    box-shadow: 0px 5px 83px 0px rgba(3, 43, 86, 0.12);
+}
+
+.contact-panel__title {
+    font-size: 24px;
+}
+
+.contact-panel__desc {
+    font-size: 15px;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    padding-top: 16px;
+}
+
+.contact-layout1 {
+    .contact-panel__info {
+        position: relative;
+        padding: 50px;
+        border-radius: 3px;
+        overflow: hidden;
+        flex: 0 0 33%;
+        max-width: 33%;
+
+        .contact__list {
+            li {
+                color: $color-white;
+                font-weight: 700;
+                font-size: 14px;
+                margin-bottom: 10px;
+
+                a {
+                    color: $color-white;
+                }
+
+                i {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        .contact-panel__title {
+            font-size: 22px;
+            margin-bottom: 28px;
+        }
+
+        .contact-panel__desc {
+            margin-bottom: 45px;
+        }
+    }
+
+    .contact-panel__form {
+        flex: 0 0 67%;
+        max-width: 67%;
+    }
+
+    .contact-panel__subtitle {
+        font-size: 25px;
+        font-weight: 400;
+
+    }
+}
+
+.contact-layout2 {
+    .contact-panel__form>.row {
+        margin-bottom: -90px;
+    }
+}
+
+.contact-layout3 {
+    .packages-wrapper {
+        box-shadow: 0px 5px 83px 0px rgba(27, 26, 26, 0.12);
+    }
+
+    .pricing-package {
+        height: 100%;
+        margin-bottom: 0;
+        box-shadow: none;
+    }
+
+    .slick-dots {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    .slick-track {
+        display: flex !important;
+    }
+
+    .slick-slide {
+        height: inherit !important;
+    }
+}
+
+.contact-layout4 {
+    .total__price {
+        line-height: 1;
+        font-size: 24px;
+        max-width: 350px;
+        padding: 20px 25px;
+        border-radius: 5px;
+        color: $color-white;
+        background-color: $color-primary;
+    }
+}
+
+.contact-layout5 {
+    .list-items-light.list-items-layout2 li:before {
+        color: $color-secondary;
+        border-color: $color-white;
+        background-color: $color-white;
+    }
+}
+
+.locations-panel {
+    margin-bottom: 65px;
+
+    .locations__panel-header {
+        border-bottom: 2px solid #eaeaea;
+        margin-bottom: 25px;
+    }
+
+    .locations__panel-title {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            line-height: 40px;
+            flex-basis: 25%;
+
+            a {
+                color: $color-secondary;
+                font-size: 14px;
+                font-weight: 700;
+
+                &:hover {
+                    color: $color-primary;
+                }
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1300px) {
+
+    .contact-layout2,
+    .contact-layout3 {
+        margin: 0 20px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .contact-layout5 {
+        margin-right: 50px;
+        margin-left: 50px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+}
+
+@media (min-width:1600px) {
+
+    .contact-layout2,
+    .contact-layout3 {
+        margin: 0 60px;
+    }
+}
+
+@media (min-width:1200px) {
+
+    .contact-layout1 {
+        .contact-panel__form {
+            padding-left: 85px;
+        }
+    }
+
+    .contact-layout2 {
+        .contact-panel {
+            padding: 50px;
+            margin-left: 50px;
+        }
+
+        .btn__secondary {
+            height: 78px;
+        }
+    }
+
+    .contact-layout3 {
+        .contact-panel__form {
+            padding: 85px 85px;
+        }
+    }
+
+    .contact-layout5 .contact-panel {
+        margin-left: 30px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+    .contact-panel {
+        padding: 40px;
+    }
+
+    .contact-layout1 {
+        .contact-panel__form {
+            padding-right: 30px;
+        }
+    }
+}
+
+@media (max-width:1199px) {
+
+    .contact-layout4 .contact-panel,
+    .contact-layout3 .contact-panel__form {
+        padding: 20px;
+    }
+}
+
+@media (min-width:992px) {
+    .fancyboxs-layout2 .fancybox-item:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+/* Mobile Phones & tablets and Small Screens */
+@media (max-width:991px) {
+    .contact-info {
+        .contact-box {
+            padding: 25px;
+        }
+    }
+
+    .contact-panel {
+        padding: 25px;
+
+        .contact-panel__desc {
+            font-size: 13px;
+        }
+    }
+
+    .contact-layout1 {
+        .contact-panel__info {
+            padding: 20px;
+            margin-bottom: 30px;
+
+            &:after {
+                top: 20px;
+                bottom: 20px;
+            }
+        }
+
+        .contact-panel__info,
+        .contact-panel__form {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .contact-layout2,
+    .contact-layout3 {
+        .contact-panel {
+            margin-bottom: 30px;
+        }
+    }
+
+    .locations-panel {
+        margin-bottom: 70px;
+
+        ul li {
+            flex-basis: 33.3333%;
+        }
+    }
+}
+
+/* Mobile Phones and tablets  */
+@include xs-sm-screens {
+    .contact-info .boxes-wrapper {
+        margin-top: -20px;
+
+        .contact-box {
+            padding: 15px;
+
+            .contact__icon {
+                font-size: 40px;
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 50px;
+                flex: 0 0 50px;
+                max-width: 50px;
+            }
+
+            .contact__title {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .locations-panel {
+        margin-bottom: 40px;
+
+        .locations__panel-header {
+            margin-bottom: 20px;
+        }
+
+        .locations__panel-title {
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            flex-basis: 50%;
+        }
+    }
+}
+
+/* Custom Media in Mobile Phones */
+@media only screen and (max-width: 450px) {
+    .locations-panel {
+        margin-bottom: 30px;
+
+        ul li {
+            flex-basis: 100%;
+        }
+    }
+}

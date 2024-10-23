@@ -1,0 +1,255 @@
+/*---------------------------
+        Forms
+----------------------------*/
+label {
+    color: $color-secondary;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+
+    &.error {
+        color: red;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 7px 0 0 0;
+    }
+}
+
+.form-check-label {
+    font-weight: 400;
+    color: $color-body;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    font-size: 14px;
+    height: 60px;
+    padding: 0 20px;
+    border-radius: 2px;
+    background-color: transparent;
+    border: 2px solid #eaeaea;
+
+    &:focus {
+        border-color: $color-primary;
+        background-color: transparent;
+    }
+
+    &::-webkit-input-placeholder {
+        color: #616161;
+    }
+
+    &:-moz-placeholder {
+        color: #616161;
+    }
+
+    &::-moz-placeholder {
+        color: #616161;
+    }
+
+    &:-ms-input-placeholder {
+        color: #616161;
+    }
+}
+
+textarea.form-control {
+    min-height: 105px;
+    padding-top: 10px;
+}
+
+.form__title {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+/* Input Radio */
+.custom-control {
+    min-height: 0;
+    padding-left: 25px;
+}
+
+.custom-control-inline {
+    align-items: center;
+}
+
+// .custom-radio .custom-control-label:before {
+//     border-radius: 5px;
+// }
+
+// .custom-control-input {
+//     width: 17px;
+//     height: 17px;
+// }
+
+.custom-control-label {
+    font-weight: 400;
+    color: $color-body;
+
+    &:before {
+        position: absolute;
+        top: -2px;
+        left: -1.5rem;
+        width: 1rem;
+        height: 1rem;
+        pointer-events: none;
+        content: "";
+        background-color: #fff;
+        border: 1px solid #e7ebef;
+        border-radius: 0;
+    }
+
+    &:after {
+        position: absolute;
+        top: 3px;
+        left: -19.5px;
+        width: 1rem;
+        height: 1rem;
+        content: "";
+        background: no-repeat 50%/50% 50%;
+        border-radius: 1px;
+    }
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    background-image: none;
+    background-color: $color-primary;
+    width: 7px;
+    height: 7px;
+    border-radius: 0;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 1px;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: $color-primary !important;
+    background-color: transparent !important;
+}
+
+input[type=checkbox],
+input[type=radio],
+.custom-control-input:focus~.custom-control-label::before {
+    box-shadow: none !important;
+}
+
+.nice-select {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 30px;
+
+    &:hover {
+        border-color: #eef3fa;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .current,
+    .option {
+        color: $color-secondary;
+    }
+}
+
+.form-group-icon {
+    position: absolute;
+    top: 23px;
+    left: 23px;
+    z-index: 2;
+    color: #d7d8da;
+    pointer-events: none;
+
+    +.form-control,
+    +select+.form-control {
+        padding-left: 45px;
+    }
+
+    +.form-control[type="date"],
+    +.form-control[type="time"] {
+        padding: 0 15px;
+    }
+}
+
+.form-group-date {
+    .form-group-icon {
+        top: 22px;
+        left: auto;
+        right: 14px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: $color-white;
+    }
+}
+
+::-webkit-inner-spin-button,
+::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.increase-qty,
+.decrease-qty {
+    display: flex;
+    justify-content: center;
+    width: 19px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    font-size: 11px;
+    border: 0;
+    border-radius: 3px;
+    color: $color-secondary;
+    background-color: $color-white;
+    @include prefix(user-select, none, webkit moz ms o);
+}
+
+.increase-qty {
+    top: 16px;
+    align-items: flex-end;
+}
+
+.decrease-qty {
+    bottom: 16px;
+    align-items: flex-start;
+}
+
+.input-number::-webkit-inner-spin-button,
+.input-number::-webkit-outer-spin-button {
+    @include prefix(appearance, none, webkit moz ms o);
+}
+
+.float-label {
+    label {
+        position: absolute;
+        top: -10px;
+        z-index: 2;
+        padding: 5px;
+        margin: 0 15px;
+        background-color: $color-white;
+    }
+}
+
+/* Extra Small Devices */
+@include xs-sm-screens {
+
+    .form-group,
+    .nice-select {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        height: 50px;
+    }
+
+    .nice-select {
+        height: 50px;
+        line-height: 50px;
+    }
+}

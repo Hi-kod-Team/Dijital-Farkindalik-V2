@@ -1,0 +1,96 @@
+/*-----------------------
+    careers
+------------------------*/
+.careers {
+    .slick-list {
+        margin: -15px;
+        overflow: visible;
+    }
+
+    .slick-slide {
+        margin: 15px;
+        -webkit-transition: opacity .3s ease, visibility .3s ease, box-shadow 0.4s ease;
+        -moz-transition: opacity .3s ease, visibility .3s ease, box-shadow 0.4s ease;
+        -ms-transition: opacity .3s ease, visibility .3s ease, box-shadow 0.4s ease;
+        -o-transition: opacity .3s ease, visibility .3s ease, box-shadow 0.4s ease;
+        transition: opacity .3s ease, visibility .3s ease, box-shadow 0.4s ease;
+
+        &.slick-active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:not(.slick-active) {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .slick-dots {
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+.job-item {
+    padding: 40px;
+    border-radius: 3px;
+    background-color: $color-white;
+    box-shadow: 0 0 12px 0 rgba(40, 40, 40, 0.08);
+    box-shadow: 0 5px 83px 0 rgba(40, 40, 40, .08);
+    @include prefix(transition, all 0.4s ease, webkit moz ms o);
+
+    &:hover {
+        box-shadow: 0 0 15px 0 rgba(40, 40, 40, 0.1);
+        @include prefix(transform, translateY(-2px), webkit moz ms o);
+    }
+
+    .job__meta {
+        margin-bottom: 32px;
+    }
+
+    .job__type {
+        font-size: 13px;
+        padding: 5px 10px;
+        border-radius: 1px;
+        margin-right: 15px;
+        text-transform: capitalize;
+        color: $color-white;
+        background-color: $color-primary;
+    }
+
+    .job__location {
+        font-size: 13px;
+        color: #616161;
+    }
+
+    .job__title {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .job__desc {
+        font-size: 15px;
+        margin-bottom: 32px;
+    }
+
+    .btn {
+        height: 50px;
+        min-width: 130px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .job-item {
+        padding: 20px;
+
+        .job__meta {
+            margin-bottom: 20px;
+        }
+
+        .job__title {
+            margin-bottom: 10px;
+        }
+    }
+}

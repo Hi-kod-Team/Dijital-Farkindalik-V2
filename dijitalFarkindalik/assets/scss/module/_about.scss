@@ -1,0 +1,259 @@
+/*----------------------
+    About
+-----------------------*/
+.about__img {
+    position: relative;
+
+    img {
+        border-radius: 5px;
+    }
+}
+
+.about-layout1 {
+    .about__Text {
+        position: relative;
+        margin-left: 100px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: -45px;
+            top: 10px;
+            width: 4px;
+            height: 94px;
+            background-color: #eaeaea;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+.about-layout2 {
+    .about-content {
+        max-width: 580px;
+    }
+
+    .testimonials-box {
+        position: absolute;
+        right: 0;
+        bottom: -90px;
+        z-index: 2;
+    }
+}
+
+.about-layout3,
+.about-layout4,
+.about-layout5 {
+    .heading__desc {
+        color: #c6c6c6;
+    }
+
+    .about__text .list-items-layout5 .list__item {
+        margin-left: -30px;
+    }
+
+    .cta-banner {
+        position: absolute;
+        top: 50%;
+        @include prefix(transform, translateY(-50%), webkit moz ms o);
+    }
+}
+
+.about-layout5 {
+    .widget-categories ul li {
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+        a {
+            padding: 17px 20px;
+            border-radius: 50px;
+            color: $color-secondary;
+            background-color: #eaeaea;
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-primary;
+            }
+        }
+    }
+}
+
+.blockquote {
+    .quote__title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.7;
+    }
+
+    .quote__author,
+    .quote__rate {
+        font-size: 14px;
+    }
+}
+
+.read__note {
+    .rating {
+        color: $color-accent;
+    }
+
+    .note__text {
+        max-width: 370px;
+    }
+
+    .note__text {
+        color: $color-white;
+
+        span {
+            color: $color-accent;
+            border-bottom: 2px solid $color-accent;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .about-layout1 {
+        .cta__banner {
+            position: absolute;
+            right: -40px;
+            bottom: -40px;
+            padding: 40px;
+            width: 260px;
+
+            .cta__desc {
+                font-size: 17px;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    .about-layout2 {
+        .about__img {
+            margin-right: 70px;
+        }
+
+        .cta__banner {
+            position: absolute;
+            left: -40px;
+            bottom: 0;
+            padding: 40px;
+
+            .cta__desc {
+                font-size: 17px;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    .about-layout2+.fancyboxs-layout1 {
+        padding-top: 210px;
+    }
+
+    .about-layout3,
+    .about-layout4,
+    .about-layout5 {
+        .heading-layout1 {
+            .heading__subtitle {
+                margin-bottom: 22px;
+            }
+
+            .heading__title {
+                font-size: 34px;
+            }
+
+            .heading__desc {
+                font-size: 15px;
+                padding-right: 60px;
+            }
+        }
+    }
+
+    .about-layout3 {
+        .about__text {
+            padding-right: 60px;
+        }
+
+        .cta-banner {
+            left: -130px;
+        }
+    }
+
+    .about-layout4 {
+        .about__text {
+            padding-left: 70px;
+        }
+
+        .cta-banner {
+            right: -130px;
+        }
+    }
+
+    .about-layout5 {
+        .about__text {
+            padding-right: 90px;
+        }
+    }
+}
+
+@media (max-width:1199px) {
+    .about-layout1 {
+        .about__img {
+            margin-top: 50px;
+        }
+
+        .cta__banner {
+            margin-top: 30px;
+        }
+    }
+
+    .about-layout2 .inner-padding {
+        padding-top: 110px !important;
+    }
+
+    .about-layout3 .cta-banner,
+    .about-layout4 .cta-banner {
+        right: 130px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@media (max-width:992px) {
+    .about-layout1 .about__Text {
+        margin-left: 30px;
+
+        p {
+            font-size: 15px;
+        }
+
+        &:before {
+            left: -30px;
+        }
+    }
+
+    .about-layout2 {
+        .testimonials-box {
+            left: 0;
+            padding: 20px;
+            margin: 0 30px;
+        }
+
+        .heading-layout2 .heading__desc {
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    .about-layout4 .about__img {
+        margin-bottom: 20px;
+    }
+
+    .about-layout5 .widget-categories ul li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        a {
+            padding: 10px 15px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+/*------------------------
+    Alerts
+--------------------------*/
+.alert-primary {
+    padding: 20px 25px;
+    color: $color-primary;
+    background-color: #dfefd5;
+    border-color: transparent;
+
+    .alert__title {
+        font-size: 19px;
+    }
+}
+
+/* Extra Small Devices */
+@include xs-sm-screens {
+    .alert-primary {
+        padding: 10px;
+
+        .alert__title {
+            font-size: 14px;
+        }
+
+        .btn:not(.btn__link) {
+            min-width: 100px;
+            height: 40px;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+/*------------------- 
+    Icons
+------------------*/
+.social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    li {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #eef3fa;
+            transition: all 0.4s linear;
+
+            i {
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 11px;
+                color: $color-white;
+                background-color: $color-secondary;
+                transition: all 0.4s linear;
+            }
+
+            &:hover {
+                border-color: $color-primary;
+                background-color: $color-primary;
+
+                i {
+                    color: $color-primary;
+                    background-color: $color-white;
+                }
+            }
+        }
+    }
+}
+
+.icon-arrow-right {
+    font-size: 65%;
+}

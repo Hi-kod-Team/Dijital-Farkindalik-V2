@@ -1,0 +1,189 @@
+/*-------------------------
+   Background & Colors
+--------------------------*/
+
+/* Colors */
+.color-white {
+    color: $color-white !important;
+}
+
+.color-white-hover:hover {
+    color: $color-white !important;
+}
+
+.color-gray {
+    color: $color-gray !important;
+}
+
+.color-dark {
+    color: $color-dark !important;
+}
+
+.color-primary {
+    color: $color-primary !important;
+}
+
+.color-secondary {
+    color: $color-secondary !important;
+}
+
+.color-accent {
+    color: $color-accent !important;
+}
+
+.color-heading {
+    color: $color-secondary !important;
+}
+
+.color-body {
+    color: $color-body !important;
+}
+
+.color-red {
+    color: red !important;
+}
+
+.color-success {
+    color: #65b530 !important;
+}
+
+/* backgrounds */
+
+.bg-white {
+    background-color: $color-white !important;
+}
+
+.bg-gray {
+    background-color: $color-gray !important;
+}
+
+.bg-dark {
+    background-color: #161616 !important;
+}
+
+.bg-heading {
+    background-color: $color-secondary !important;
+}
+
+.bg-primary {
+    background-color: $color-primary !important;
+}
+
+.bg-secondary {
+    background-color: $color-secondary !important;
+}
+
+.bg-light-blue {
+    background-color: #3851a2 !important;
+}
+
+.bg-img {
+    position: relative;
+    z-index: 1;
+}
+
+.background-size-auto {
+    background-size: auto !important;
+}
+
+.bg-parallax {
+    background-attachment: fixed;
+}
+
+.bg-overlay:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(#1b1a1a, 0.85);
+}
+
+.bg-overlay-2:before {
+    background-color: rgba(#1b1a1a, 0.15);
+}
+
+.bg-overlay-3:before {
+    background-color: rgba(#1b1a1a, 0.05);
+}
+
+.bg-overlay-gradient:before {
+    background-image: -webkit-linear-gradient(-90deg, rgba(6, 52, 100, 0) 0%, rgba(27, 26, 26, 0) 0%, #1b1a1a 79%);
+    background-image: -moz-linear-gradient(-90deg, rgba(6, 52, 100, 0) 0%, rgba(27, 26, 26, 0) 0%, #1b1a1a 79%);
+    background-image: -ms-linear-gradient(-90deg, rgba(6, 52, 100, 0) 0%, rgba(27, 26, 26, 0) 0%, #1b1a1a 79%);
+    background-image: linear-gradient(-90deg, rgba(6, 52, 100, 0) 0%, rgba(27, 26, 26, 0) 0%, #1b1a1a 79%);
+}
+
+.bg-overlay-secondary:before {
+    background-color: rgba($color-secondary, 0.93);
+}
+
+.bg-overlay-primary:before {
+    background-color: rgba($color-primary, 0.85);
+}
+
+.bg-overlay-primary-gradient:before {
+    // opacity: 0.95;
+    // background-image: -webkit-linear-gradient(-90deg, rgba(27, 26, 26, 0) 0%, rgba(101, 181, 48, 0) 0%, #65b530 79%);
+    // background-image: -moz-linear-gradient(-90deg, rgba(27, 26, 26, 0) 0%, rgba(101, 181, 48, 0) 0%, #65b530 79%);
+    // background-image: -ms-linear-gradient(-90deg, rgba(27, 26, 26, 0) 0%, rgba(101, 181, 48, 0) 0%, #65b530 79%);
+    // background-image: linear-gradient(-90deg, rgba(27, 26, 26, 0) 0%, rgba(101, 181, 48, 0) 0%, #65b530 79%);
+
+    background-image: -moz-linear-gradient(-90deg, rgba(27, 26, 26, 0) 0%, rgba(101, 181, 48, 0) 0%, rgb(101, 181, 48) 79%);
+    background-image: -webkit-linear-gradient(-90deg, rgba(27, 26, 26, 0) 0%, rgba(101, 181, 48, 0) 0%, rgb(101, 181, 48) 79%);
+    background-image: -ms-linear-gradient(-90deg, rgba(27, 26, 26, 0) 0%, rgba(101, 181, 48, 0) 0%, rgb(101, 181, 48) 79%);
+    background-image: linear-gradient(-90deg, rgba(27, 26, 26, 0) 0%, rgba(101, 181, 48, 0) 0%, rgb(101, 181, 48) 79%);
+
+}
+
+.bg-overlay-secondary-gradient {
+    &:before {
+        background-color: transparent;
+        background-image: linear-gradient(180deg, #032B5600 0%, #032B56 100%);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.95;
+        background-color: #032B56;
+    }
+}
+
+.bg-overlay-accent-gradient {
+    &:before {
+        background-color: transparent;
+        background-image: linear-gradient(0deg, #E0222200 0%, #FEE023 80%);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.9;
+        background-color: $color-accent;
+    }
+}
+
+
+.bg-overlay-blue-gradient:before {
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #3851A2E6 21%, #263B72 86%);
+}

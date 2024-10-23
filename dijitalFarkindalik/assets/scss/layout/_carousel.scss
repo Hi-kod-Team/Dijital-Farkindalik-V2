@@ -1,0 +1,121 @@
+/*----------------------
+    Carousel
+-----------------------*/
+.slick-list {
+    margin: 0 -10px;
+}
+
+.slick-slide {
+    margin: 0 10px;
+}
+
+.m-slides-0 {
+    .slick-list {
+        margin: 0;
+    }
+
+    .slick-slide {
+        margin: 0;
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 0;
+    z-index: 3;
+    color: $color-secondary;
+    background-color: #e8e8e8;
+    @include prefix(transition, all 0.3s linear, webkit moz ms o);
+    @include prefix(transform, translateY(-50%), webkit moz ms o);
+
+    &.slick-next,
+    &.slick-prev {
+        &:before {
+            font-family: 'icomoon';
+            font-size: 10px;
+        }
+    }
+
+    &.slick-next {
+        right: 0;
+
+        &:before {
+            content: "\e901";
+        }
+    }
+
+    &.slick-prev {
+        left: 0;
+
+        &:before {
+            content: "\e900";
+        }
+    }
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-primary;
+    }
+}
+
+.carousel-arrows-light .slick-arrow {
+    color: rgba($color-white, 0.8);
+    border-color: rgba($color-white, 0.2);
+
+    &:hover {
+        color: $color-white
+    }
+}
+
+.slick-dots {
+    list-style: none;
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    margin-bottom: 0;
+
+    li {
+        display: inline-flex;
+        position: relative;
+        margin: 0 5px;
+        @include prefix(transition, all 0.3s linear, webkit moz ms o);
+
+        button {
+            display: block;
+            font-size: 0;
+            width: 20px;
+            height: 5px;
+            padding: 0;
+            border-radius: 1px;
+            background-color: $color-secondary;
+            @include prefix(transition, all 0.2s linear, webkit moz ms o);
+        }
+
+        &.slick-active {
+            button {
+                width: 30px;
+                background-color: $color-primary;
+            }
+        }
+    }
+}
+
+.carousel-dots-light .slick-dots li {
+
+    button {
+        background-color: $color-white;
+    }
+
+    &.slick-active {
+        button {
+            background-color: $color-primary;
+        }
+    }
+}
