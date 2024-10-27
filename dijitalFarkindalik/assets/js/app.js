@@ -20,7 +20,7 @@ ui.btnStart.addEventListener("click", function() {
 
 ui.btnNext.addEventListener("click", function() {
     if(quiz.sorular.length != quiz.soruIndex) {
-        startTimer(15);
+        startTimer(10);
         startTimerLine();
         ui.soruGoster(quiz.soruGetir());
         ui.soruSayisiniGoster(quiz.soruIndex + 1, quiz.sorular.length);
