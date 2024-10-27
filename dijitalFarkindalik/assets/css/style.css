@@ -3996,7 +3996,7 @@ input[type=radio],
   padding: 5px;
   border-radius: 50%;
   margin-right: 12px;
-  box-shadow: 0 0 0 2px rgba(101, 181, 48, 0.5);
+  box-shadow: 0 0 0 2px #3daeb7;
 }
 .phone__number .phone__icon:before {
   content: "";
@@ -4008,7 +4008,7 @@ input[type=radio],
   border-radius: 50%;
   -webkit-animation: ripple 3s infinite;
           animation: ripple 3s infinite;
-  box-shadow: 0 0 0 2px rgba(101, 181, 48, 0.5);
+  box-shadow: 0 0 0 2px #3daeb7;
 }
 .phone__number .phone__icon .icon-phone {
   display: flex;
