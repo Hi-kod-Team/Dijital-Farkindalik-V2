@@ -58,7 +58,7 @@ function optionSelected(e) {
 }
 
 ui.btnQuit.addEventListener("click", function() {
-    window.location.href = "/dijitalFarkindalik/index.html";
+    window.location.href = "index.html";
 });
 
 ui.btnReplay.addEventListener("click", function() {
