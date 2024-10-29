@@ -260,3 +260,17 @@ $(function () {
     loadMore('.loadMoreportfolio', '.portfolio-hidden > .portfolio-item');
     loadMore('.loadMoreGallery', '.gallery-hidden > .gallery-img');
 });
+document.getElementById("myButton").addEventListener("click", function() {
+    window.location.href = 'https://giris.turkiye.gov.tr/Giris/SifremiUnuttum';
+});
+document.getElementById("myButton2").addEventListener("click", function() {
+        window.location.href = 'https://giris.turkiye.gov.tr/Giris/e-Devlet-Sifresi';
+});
+const section = document.querySelectorAll('.login');
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    section.forEach((section, index) => {
+        const scale = 1 + scrollPosition * 0.5;
+       section.style.transform = `scale(${scale})`;
+    });
+});

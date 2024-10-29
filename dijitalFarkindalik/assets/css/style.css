@@ -1804,222 +1804,115 @@ h6 {
 /*---------------------------
         Forms
 ----------------------------*/
-label {
-  color: #222222;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 10px;
-}
-label.error {
-  color: red;
-  font-size: 14px;
-  font-weight: 400;
-  margin: 7px 0 0 0;
-}
 
-.form-check-label {
-  font-weight: 400;
-  color: #9b9b9b;
+.login{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:sans-serif;
+  margin-bottom: 50px;
 }
-
-.form-group {
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.form-control {
-  font-size: 14px;
-  height: 60px;
-  padding: 0 20px;
-  border-radius: 2px;
-  background-color: transparent;
-  border: 2px solid #eaeaea;
-}
-.form-control:focus {
-  border-color:  #3daeb7;
-  background-color: transparent;
-}
-.form-control::-webkit-input-placeholder {
-  color: #616161;
-}
-.form-control:-moz-placeholder {
-  color: #616161;
-}
-.form-control::-moz-placeholder {
-  color: #616161;
-}
-.form-control:-ms-input-placeholder {
-  color: #616161;
-}
-
-textarea.form-control {
-  min-height: 105px;
-  padding-top: 10px;
-}
-
-.form__title {
-  font-size: 18px;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-
-/* Input Radio */
-.custom-control {
-  min-height: 0;
-  padding-left: 25px;
-}
-
-.custom-control-inline {
-  align-items: center;
-}
-
-.custom-control-label {
-  font-weight: 400;
-  color: #9b9b9b;
-}
-.custom-control-label:before {
-  position: absolute;
-  top: -2px;
-  left: -1.5rem;
-  width: 1rem;
-  height: 1rem;
-  pointer-events: none;
-  content: "";
-  background-color: #fff;
-  border: 1px solid #e7ebef;
-  border-radius: 0;
-}
-.custom-control-label:after {
-  position: absolute;
-  top: 3px;
-  left: -19.5px;
-  width: 1rem;
-  height: 1rem;
-  content: "";
-  background: no-repeat 50%/50% 50%;
-  border-radius: 1px;
-}
-
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: none;
-  background-color:  #3daeb7;
-  width: 7px;
-  height: 7px;
-  border-radius: 0;
-}
-
-.custom-checkbox .custom-control-label::before {
-  border-radius: 1px;
-}
-
-.custom-control-input:checked ~ .custom-control-label::before {
-  border-color:  #3daeb7 !important;
-  background-color: transparent !important;
-}
-
-input[type=checkbox],
-input[type=radio],
-.custom-control-input:focus ~ .custom-control-label::before {
-  box-shadow: none !important;
-}
-
-.nice-select {
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  margin-bottom: 30px;
-}
-.nice-select:hover {
-  border-color: #eef3fa;
-}
-.nice-select .list {
-  width: 100%;
-}
-.nice-select .current,
-.nice-select .option {
-  color: #222222;
-}
-
-.form-group-icon {
-  position: absolute;
-  top: 23px;
-  left: 23px;
-  z-index: 2;
-  color: #d7d8da;
-  pointer-events: none;
-}
-.form-group-icon + .form-control,
-.form-group-icon + select + .form-control {
-  padding-left: 45px;
-}
-.form-group-icon + .form-control[type=date],
-.form-group-icon + .form-control[type=time] {
-  padding: 0 15px;
-}
-
-.form-group-date .form-group-icon {
-  top: 22px;
-  left: auto;
-  right: 14px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border-radius: 50%;
-  background-color: #ffffff;
-}
-
-::-webkit-inner-spin-button,
-::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-
-.increase-qty,
-.decrease-qty {
+.login-body{
+  min-height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
-  width: 19px;
-  height: 15px;
+  background: url(/dijitalFarkindalik/assets/images/communication/th.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.login-wrapper {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(25, 169, 185, 0.645);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+.login-wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  color: #fff;
+}
+.login-wrapper .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(25, 169, 185, 0.645);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #000000;
+  padding: 20px 45px 20px 20px;
+
+}
+.input-box input::placeholder {
+  color:#ffffff;
+}
+.input-box i {
   position: absolute;
-  right: 10px;
-  font-size: 11px;
-  border: 0;
-  border-radius: 3px;
-  color: #222222;
-  background-color: #ffffff;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
 }
-
-.increase-qty {
-  top: 16px;
-  align-items: flex-end;
+.login-wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin:  -15px 0 15px;
 }
-
-.decrease-qty {
-  bottom: 16px;
-  align-items: flex-start;
+.remember-forgot label input {
+  accent-color:rgba(0, 0, 0, 0.645);
+  margin-right: 3px;
 }
-
-.input-number::-webkit-inner-spin-button,
-.input-number::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
+.remember-forgot a {
+  color:#fff;
+  text-decoration: none;
 }
-
-.float-label label {
-  position: absolute;
-  top: -10px;
-  z-index: 2;
-  padding: 5px;
-  margin: 0 15px;
-  background-color: #ffffff;
+.remember-forgot a:hover {
+  text-decoration: underline;
 }
-
+.login-wrapper .login-btn {
+  width: 100%;
+  height: 45px;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 16px;
+  color: rgba(25, 169, 185, 0.645);
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  
+}
+.login-btn:hover {
+  background-color: #000000;
+}
+.login-wrapper .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+.register-link p a {
+  color: rgba(255, 255, 255, 0.645);
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover {
+  text-decoration: underline;
+}
 /* Extra Small Devices */
 @media (min-width: 320px) and (max-width: 767px) {
   .form-group,
