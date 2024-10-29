@@ -274,3 +274,40 @@ window.addEventListener('scroll', () => {
        section.style.transform = `scale(${scale})`;
     });
 });
+var objPeople = [
+    {
+        username: 'Orkun',
+        password: 'Siyah'
+    },
+    {
+        username: 'Eyüp',
+        password: 'Mavi'
+    },
+    {
+        username: 'Mediha',
+        password: 'Yeşil'
+    },
+    {
+        username: 'Mediha',
+        password: 'Gri'
+    }
+];
+
+function getInfo(event) {
+    event.preventDefault();
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    var userFound = false;
+
+    for (var i = 0; i < objPeople.length; i++) {
+        if (username == objPeople[i].username && password == objPeople[i].password) {
+            console.log(username + ' giriş yaptı!');
+            userFound = true;
+            break; 
+        }
+    }
+
+    if (!userFound) {
+        console.log('Yanlış kullanıcı adı ya da şifre');
+    }
+}
