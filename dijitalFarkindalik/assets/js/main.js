@@ -260,12 +260,7 @@ $(function () {
     loadMore('.loadMoreportfolio', '.portfolio-hidden > .portfolio-item');
     loadMore('.loadMoreGallery', '.gallery-hidden > .gallery-img');
 });
-document.getElementById("myButton").addEventListener("click", function() {
-    window.location.href = 'https://giris.turkiye.gov.tr/Giris/SifremiUnuttum';
-});
-document.getElementById("myButton2").addEventListener("click", function() {
-        window.location.href = 'https://giris.turkiye.gov.tr/Giris/e-Devlet-Sifresi';
-});
+
 const section = document.querySelectorAll('.login');
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY / (document.body.scrollHeight - window.innerHeight);
@@ -274,3 +269,48 @@ window.addEventListener('scroll', () => {
        section.style.transform = `scale(${scale})`;
     });
 });
+
+
+
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault(); 
+    
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    
+    if (username && password) {
+        alert("Giriş Yapıldı!");
+
+    sessionStorage.setItem("isLoggedIn", "true");
+    
+
+    document.getElementById("commentSection").style.display = "block";
+     } else {
+        alert("Lütfen kullanıcı adı ve şifre giriniz.");
+  }
+});
+
+  
+  document.getElementById("submitComment").addEventListener("click", function() {
+    const comment = document.getElementById("commentInput").value;
+    
+ 
+    if (comment) {
+      const commentDisplay = document.getElementById("commentsDisplay");
+      const newComment = document.createElement("p");
+      newComment.textContent = comment;
+      commentDisplay.appendChild(newComment);
+   
+      document.getElementById("commentInput").value = "";
+
+      alert("Yorum başarıyla eklendi!")
+    }
+  });
+
+  
+  window.onload = function() {
+    if (sessionStorage.getItem("isLoggedIn") === "true") {
+      
+      document.getElementById("commentSection").style.display = "block";
+    }
+  };
