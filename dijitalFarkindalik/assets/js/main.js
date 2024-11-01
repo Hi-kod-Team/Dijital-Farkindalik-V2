@@ -261,7 +261,7 @@ $(function () {
     loadMore('.loadMoreGallery', '.gallery-hidden > .gallery-img');
 });
 
-const section = document.querySelectorAll('.login');
+const section = document.querySelectorAll('.login-wrapper, .comment-wrapper');
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY / (document.body.scrollHeight - window.innerHeight);
     section.forEach((section, index) => {
@@ -276,17 +276,18 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
     e.preventDefault(); 
     
     const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value;
+    const phonenumber = document.getElementById("phonenumber").value;
     
-    if (username && password) {
-        alert("Giriş Yapıldı!");
+    if (username && email && phonenumber) {
+        alert("Başarıyla Gönderildi!");
 
     sessionStorage.setItem("isLoggedIn", "true");
     
 
     document.getElementById("commentSection").style.display = "block";
      } else {
-        alert("Lütfen kullanıcı adı ve şifre giriniz.");
+        alert("Lütfen bütün alanları doldurunuz!");
   }
 });
 
