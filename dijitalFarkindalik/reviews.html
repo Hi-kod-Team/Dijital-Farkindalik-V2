@@ -120,37 +120,49 @@
     <!-- ========================
     Reviews categories
     ========================== -->
-    <section class="login">
-      <div class="login-body">
-        <div class="login-wrapper">
-          <form id="loginForm">
-            <h1>Giriş</h1>
+    <div class="login">
+        <div class="login-body">
+          <div class="login-wrapper">
+            <form id="loginForm">
+            <h1>İletişim Formu</h1>
             <div class="input-box">
-              <input type="text" id="username" autocomplete="on" placeholder="Kullanıcı Adı" required>
+              <input type="text" id="username" autocomplete="on" placeholder="Ad-Soyad" required>
               <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-              <input type="password" id="password" autocomplete="on" placeholder="Şifre">
-              <i class='bx bxs-lock'></i>
+              <input type="email" id="email" autocomplete="on" placeholder="E-mail">
+              <i class='bx bx-envelope'></i>
             </div>
-            <button type="submit" class="login-btn">Giriş</button>
+            <div class="input-box">
+              <input type="number" id="phonenumber" autocomplete="on" placeholder="Telefon">
+              <i class='bx bx-phone'></i>
+            </div>
+            <button type="submit" class="login-btn">Gönder</button>
           </form>
         </div>
       </div>
     </section>
+    <div class="comment" id="commentSection" style="display: none;">
 
-    <section class="comment" id="commentSection" style="display: none;">
-      <div class="comment-body">
-        <div class="comment-wrapper">
-          <h2>Yorumunu Ekle</h2>
-            <textarea id="commentInput" placeholder="Yorumunuzu buraya ekleyiniz." class="text-input"></textarea>
+      <div class="comment-body" >
+        <div class="comment-wrapper"  >
+          <h2>Yorumlar</h2>
+          <form id="commentForm">
+            <div class="text-input">
+              <input type="text" id="commentInput" autocomplete="on" placeholder="Yorumunuzu buraya ekleyiniz.">
+              <i class='bx bx-message-rounded-dots'></i>
+            </textarea>            
+          </div>
           <button id="submitComment" class="comment-btn">Gönder</button>
           <div id="commentsDisplay">
           </div>
-        </div>
+        </form>
       </div>
-    </section>
+    </div>
+  </div>
+  </section>
 
+  
 </html>
 <!-- ========================
       Footer
