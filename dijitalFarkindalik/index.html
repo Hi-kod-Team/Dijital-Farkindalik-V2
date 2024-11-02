@@ -789,8 +789,9 @@
             </div><!-- /.col-xl-2 -->
             <div class="col-sm-6 col-md-4 col-lg-2">
               <div class="footer-widget-nav">
-                <h6 class="footer-widget__title">İçerik</h6>
-                <nav>
+                <div class="footer-widget-header d-flex align-items-center justify-content-between">
+                  <h6 class="footer-widget__title">İçerik</h6>
+                </div>
                   <ul class="list-unstyled">
                     <li><a href="eğitimler.html">Eğitimler</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -798,14 +799,17 @@
                     <li><a href="team.html">Biz kimiz ?</a></li>
                     <li><a href="iletisim.html">İletişim</a></li>
                   </ul>
-                </nav>
+                  <form class="cta__form">
+                    <div class="form-group d-flex flex-wrap ">
+                      <p class="LoginNoti">Gelişmelerden haberdar olmak için kayıt olun. </p>
+                      <input type="email" class="form-control" placeholder="E-mail giriniz">
+                      <button type="submit" class="btn btn__secondary btn__xl">
+                        <span>Kaydet</span> <i class="icon-arrow-right"></i>
+                      </button>
+                  </form>
+                </div>
+                
               </div><!-- /.footer-widget-nav -->
-            </div><!-- /.col-lg-2 -->
-
-            <div class="col-sm-6 col-md-4 col-lg-2">
-
-            </div><!-- /.col-lg-2 -->
-
           </div><!-- /.row -->
         </div><!-- /.container -->
       </div><!-- /.footer-primary -->
@@ -829,6 +833,8 @@
   <script src="assets/js/jquery-3.5.1.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
+
+  
 </body>
 
 </html>

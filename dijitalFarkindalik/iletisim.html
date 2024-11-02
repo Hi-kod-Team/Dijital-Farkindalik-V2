@@ -81,35 +81,25 @@
         </div><!-- /.container -->
       </nav><!-- /.navabr -->
     </header><!-- /.Header -->
+
     <!-- ========================
        page title 
     =========================== -->
-    <section class="page-title-layout1 page-title-light bg-overlay text-center">
-      <div class="bg-img bg-primary"><img src="assets/images/page-titles/review.webp" alt="background"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="pagetitle__heading mb-0">Bizimle İletişime Geç</h1>
+    <section class="page-title-layout1 page-title-light  text-center">
+      <div class="bg-img"><img src="assets/images/page-titles/iletisim1.jpg" alt="background"></div>
+    
+      <div class="container" >
+        <div class="row" >
+          <div class="col-12" >
+            <h1 class="pagetitle__heading mb-0" style="color:greenyellow">Bizimle İletişime Geç</h1>
+
           </div><!-- /.col-12 -->
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.page-title -->
-    <div class="breadcrumb-area border-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav>
-              <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="about-us.html">Company</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Reviews</li>
-              </ol>
-            </nav>
-          </div><!-- /.col-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </div><!-- /.breadcrumb-area -->
-
+  
+  </div><!-- /.breadcrumb-area -->
+  </body>
     <!-- ========================
     Reviews categories
     ========================== -->
@@ -130,30 +120,14 @@
               <input type="number" id="phonenumber" autocomplete="on" placeholder="Telefon">
               <i class='bx bx-phone'></i>
             </div>
+              <textarea class="comment-box" id="comment" autocomplete="on" placeholder="Görüşleriniz"></textarea>
+            
             <button type="submit" class="login-btn">Gönder</button>
           </form>
         </div>
       </div>
     </section>
-    <div class="comment" id="commentSection" style="display: none;">
-
-      <div class="comment-body" >
-        <div class="comment-wrapper"  >
-          <h2>Yorumlar</h2>
-          <form id="commentForm">
-            <div class="text-input">
-              <input type="text" id="commentInput" autocomplete="on" placeholder="Yorumunuzu buraya ekleyiniz.">
-              <i class='bx bx-message-rounded-dots'></i>
-            </textarea>            
-          </div>
-          <button id="submitComment" class="comment-btn">Gönder</button>
-          <div id="commentsDisplay">
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  </section>
+    
 
   
 </html>
