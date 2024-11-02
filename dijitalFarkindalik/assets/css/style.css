@@ -1801,7 +1801,7 @@ h6 {
     margin: 0 5px;
   }
 }
-/*---------------------------
+/*---------------
         Forms
 ----------------------------*/
 .login {
@@ -1815,18 +1815,19 @@ h6 {
   font-family:sans-serif;
 }
 .login-body{
-  min-height: 100vh;
+  min-height: 150vh;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(/dijitalFarkindalik/assets/images/communication/th.jpg) no-repeat;
+  background: url(/dijitalFarkindalik/assets/images/gallery/iletisim\ 2.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 .login-wrapper {
   width: 420px;
   background: transparent;
-  border: 2px solid rgba(25, 169, 185, 0.645);
+  border: 2px solid rgba(255, 255, 255, 0.645);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   color: #ffffff;
@@ -1844,20 +1845,41 @@ h6 {
   height: 50px;
   margin: 30px 0;
 }
+.login-wrapper .comment-box {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  margin: 10px 0;
+  margin-top: -5px;
+}
 .input-box input {
   width: 100%;
   height: 100%;
   background: transparent;
   border: none;
   outline: none;
-  border: 2px solid rgba(25, 169, 185, 0.645);
+  border: 2px solid rgba(255, 255, 255, 0.645);
   border-radius: 40px;
   font-size: 16px;
-  color: #000000;
+  color: #ffffff;
   padding: 20px 45px 20px 20px;
-
+}
+.comment-box{
+  width: 100%;
+  height: 200px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.645);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 20px 45px 20px 20px;
 }
 .input-box input::placeholder {
+  color:#ffffff;
+}
+.comment-box::placeholder {
   color:#ffffff;
 }
 .input-box i {
@@ -1867,7 +1889,13 @@ h6 {
   transform: translateY(-50%);
   font-size: 20px;
 }
-
+.comment-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
 .login-wrapper .login-btn {
   width: 100%;
   height: 45px;
@@ -1878,95 +1906,13 @@ h6 {
   box-shadow: 0 0 10px rgb(255, 255, 255);
   cursor: pointer;
   font-size: 16px;
-  color: rgba(25, 169, 185, 0.645);
+  color: rgba(60, 9, 95, 0.645);
   transition: background-color 0.3s ease;
   font-weight: 600;
   
 }
 .login-btn:hover {
-  background-color: #000000;
-}
-
-/**/Comment Section/**/
-.comment {
-  margin: 0;
-  
-  padding: 0;
-  font-family:sans-serif;
-}
-.comment-body {
-  height: 100vh; 
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-position: center;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color:rgba(25, 169, 185, 0.645);
-}
-.comment-wrapper {
-  width: 420px;
-  border: 2px solid rgba(255, 255, 255, 0.645);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-  color: #ffffff;
-  border-radius: 10px;
-  padding: 30px 40px;
-  background: rgba(25, 169, 185, 0.645);
-}
-.comment-wrapper .comment-btn {
-  width: 100%;
-  height: 45px;
-  background: #ffffff;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgb(255, 255, 255);
-  cursor: pointer;
-  font-size: 16px;
-  color: rgba(25, 169, 185, 0.645);
-  transition: background-color 0.3s ease;
-  font-weight: 600;
-}
-  .comment-btn:hover {
-    background-color: #000000;
-}
-.comment-wrapper h2 {
-  font-size: 36px;
-  text-align: center;
-  color: #fff;
-}
-.comment-wrapper .text-input {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  margin: 30px 0;
-}
-.comment-wrapper input {
-  width: 100%;
-  margin-top: 10px;
-  height: 70px;
-  border: none;
-  outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.645);
-  border-radius: 40px;
-  font-size: 16px;
-  color: #000000;
-  padding: 20px 45px 20px 20px;
-  background-color: rgba(25, 169, 185, 0.645);
-
-}
-.comment-wrapper input::placeholder {
-  color:#ffffff;
-}
-.comment-wrapper i {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
+  background-color: #1ebaae;
 }
 
 
@@ -3933,6 +3879,32 @@ h6 {
 }
 .footer .footer-scroll {
   background-color: #282828;
+}
+.list-unstyled {
+  margin-top: -33px;
+}
+.cta__form {
+  display:flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-left: 500px;
+  margin-top: -233px;
+  width: 500px;
+}
+.LoginNoti {
+  color: #ffffff;
+  font-weight: bold;
+}
+.form-control {
+  width: 420px;
+  background-color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.645);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 30px 40px;
+
 }
 
 .phone__number {

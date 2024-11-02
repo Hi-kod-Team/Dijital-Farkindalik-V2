@@ -278,40 +278,11 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
     const phonenumber = document.getElementById("phonenumber").value;
+    const comment = document.getElementById("comment").value;
     
-    if (username && email && phonenumber) {
-        alert("Başarıyla Gönderildi!");
-
-    sessionStorage.setItem("isLoggedIn", "true");
-    
-
-    document.getElementById("commentSection").style.display = "block";
-     } else {
-        alert("Lütfen bütün alanları doldurunuz!");
-  }
-});
-
-  
-  document.getElementById("submitComment").addEventListener("click", function() {
-    const comment = document.getElementById("commentInput").value;
-    
- 
-    if (comment) {
-      const commentDisplay = document.getElementById("commentsDisplay");
-      const newComment = document.createElement("p");
-      newComment.textContent = comment;
-      commentDisplay.appendChild(newComment);
-   
-      document.getElementById("commentInput").value = "";
-
-      alert("Yorum başarıyla eklendi!")
+    if (username && email && phonenumber && comment) {
+        alert("Formunuz başarıyla gönderildi!");
     }
-  });
+    else alert('Lütfen tüm alanları doldurunuz! ')
+    });
 
-  
-  window.onload = function() {
-    if (sessionStorage.getItem("isLoggedIn") === "true") {
-      
-      document.getElementById("commentSection").style.display = "block";
-    }
-  };
