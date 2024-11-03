@@ -1804,40 +1804,127 @@ h6 {
 /*---------------
         Forms
 ----------------------------*/
+
+
 .login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  font-family: sans-serif;
   box-sizing: border-box;
-  ; }
-  
-.login{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family:sans-serif;
 }
-.login-body{
+
+.login-text {
+  margin-bottom: 50px;
+  color: #333;
+  max-width: 500px;
+  text-align: center;
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
+}
+
+.login-text h1 {
+  font-size: 32px; 
+  color: #000;
+}
+
+.login-text p {
+  font-size: 16px; 
+  color: #666;
+}
+
+.login-body {
   min-height: 150vh;
-  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(/dijitalFarkindalik/assets/images/gallery/iletisim2.jpg) no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #ffffff;
+  margin-top: 20px;
+  flex-direction: row; 
 }
+
+.image1 {
+  width: 50%;
+  height: auto;
+  margin: 20px;
+  transform-origin: center;
+  transition: transform 0.2s ease-out;
+}
+
 .login-wrapper {
-  width: 420px;
-  background: transparent;
+  width: 100%;
+  max-width: 420px;
   border: 2px solid rgba(255, 255, 255, 0.645);
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   color: #ffffff;
   border-radius: 10px;
   padding: 30px 40px;
+  overflow: hidden;
 }
+
+/* Media query for screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+  .login-body {
+    flex-direction: column; 
+    min-height: 100vh; 
+  }
+
+  .image1 {
+    order: 2; 
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .login-wrapper {
+    order: 1; 
+    width: 90%; 
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .login-text h1 {
+    font-size: 28px; 
+  }
+
+  .login-text p {
+    font-size: 14px; 
+  }
+}
+ /*/Mobile-Ends/*/
+  
+ 
+
+.login-wrapper .bg, .wrapper .bg2, .wrapper .bg3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.login-wrapper .bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  opacity: .5;
+}
+
+.login-wrapper .bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.login-wrapper .bg3 {
+  animation-duration: 5s;
+}
+
 .login-wrapper h1 {
   font-size: 36px;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 .login-wrapper .input-box {
   position: relative;
@@ -1899,14 +1986,14 @@ h6 {
 .login-wrapper .login-btn {
   width: 100%;
   height: 45px;
-  background: #ffffff;
+  background:#ffffff;
   border: none;
   outline: none;
   border-radius: 40px;
   box-shadow: 0 0 10px rgb(255, 255, 255);
   cursor: pointer;
   font-size: 16px;
-  color: rgba(60, 9, 95, 0.645);
+  color:#000000;
   transition: background-color 0.3s ease;
   font-weight: 600;
   
@@ -1914,6 +2001,17 @@ h6 {
 .login-btn:hover {
   background-color: #1ebaae;
 }
+@keyframes slide {
+  0% {
+      transform: translateX(-25%);
+  }
+  100% {
+      transform: translateX(25%);
+  }
+}
+
+
+
 
 
 /* Extra Small Devices */
@@ -3884,28 +3982,64 @@ h6 {
   margin-top: -33px;
 }
 .cta__form {
-  display:flex;
-  justify-content: flex-end;
-  position: relative;
-  margin-left: 500px;
-  margin-top: -233px;
-  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
 }
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 .LoginNoti {
   color: #ffffff;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
 }
+
 .form-control {
-  width: 420px;
+  width: 100%;
+  height: 75px;
   background-color: #ffffff;
   border: 2px solid rgba(255, 255, 255, 0.645);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-  color: #ffffff;
+  color: #000000;
   border-radius: 10px;
-  padding: 30px 40px;
-
+  padding: 10px;
+  margin-bottom: 10px;
 }
+
+.btn__secondary {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .cta__form {
+    flex-direction: column;
+  }
+
+  .form-control {
+    margin-right: 0;
+  }
+
+  .btn__secondary {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cta__form {
+    flex-direction: column;
+    margin-left: 500px;
+    margin-top: -233px;
+    width: 500px;
+  }
 
 .phone__number {
   display: flex;
