@@ -293,11 +293,14 @@ if (loginForm) {
     });
 }
 
+
+
 const ctaForm = document.getElementById("ctaForm");
 if (ctaForm) {
     ctaForm.addEventListener("submit", function(e) {
         
-        const email = document.querySelector("#email").value;
+
+        const email = ctaForm.querySelector("#email").value;
 
         if (email) {
             alert("Başarıyla kaydoldunuz!");
