@@ -1849,7 +1849,6 @@ h6 {
   width: 50%;
   height: auto;
   margin: 20px;
-  margin-bottom: 500px;
   transform-origin: center;
   transition: transform 0.2s ease-out;
 }
