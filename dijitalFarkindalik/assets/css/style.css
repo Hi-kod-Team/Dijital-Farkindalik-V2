@@ -780,7 +780,7 @@ body {
     margin-bottom: 15px !important;
   }
   .mb-40 {
-    margin-bottom: 20px !important;
+    margin-bottom: 40px !important;
   }
   .mb-50 {
     margin-bottom: 25px !important;
@@ -6640,7 +6640,7 @@ textarea.form-control {
 }
 .widget .widget__title {
   font-size: 20px;
-  margin-bottom: 23px;
+  margin-bottom: 60px;
 }
 
 .widget-search:after {
