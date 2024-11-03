@@ -261,28 +261,48 @@ $(function () {
     loadMore('.loadMoreGallery', '.gallery-hidden > .gallery-img');
 });
 
-const section = document.querySelectorAll('.login-wrapper, .comment-wrapper');
+const imageSection = document.querySelector('.image1');
+
+if (imageSection) {
+    imageSection.style.transform = 'scale(1.2)';
+}
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    section.forEach((section, index) => {
-        const scale = 1 + scrollPosition * 0.5;
-       section.style.transform = `scale(${scale})`;
-    });
+    const scale = 1 + scrollPosition * 0.5;
+
+    if (imageSection) {
+        imageSection.style.transform = `scale(${scale})`;
+    }
 });
 
 
+const loginForm = document.getElementById("loginForm");
+if (loginForm) {
+    loginForm.addEventListener("submit", function(e) {
+        
+        const username = document.querySelector("#username").value;
+        const email = document.querySelector("#email").value;
+        const phonenumber = document.querySelector("#phonenumber").value;
+        const comment = document.querySelector("#comment").value;
 
-document.getElementById("loginForm").addEventListener("submit", function(e) {
-    e.preventDefault(); 
-    
-    const username = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const phonenumber = document.getElementById("phonenumber").value;
-    const comment = document.getElementById("comment").value;
-    
-    if (username && email && phonenumber && comment) {
-        alert("Formunuz başarıyla gönderildi!");
-    }
-    else alert('Lütfen tüm alanları doldurunuz! ')
+        if (username && email && phonenumber && comment) {
+            alert("Formunuz başarıyla gönderildi!");
+        } else {
+            alert("Lütfen tüm alanları doldurunuz!");
+        }
     });
+}
 
+const ctaForm = document.getElementById("ctaForm");
+if (ctaForm) {
+    ctaForm.addEventListener("submit", function(e) {
+        
+        const email = document.querySelector("#email").value;
+
+        if (email) {
+            alert("Başarıyla kaydoldunuz!");
+        } else {
+            alert("Lütfen email giriniz!");
+        }
+    });
+}
