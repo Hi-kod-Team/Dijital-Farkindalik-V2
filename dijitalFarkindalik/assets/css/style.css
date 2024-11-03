@@ -4035,12 +4035,11 @@ h6 {
 
 @media (min-width: 1200px) {
   .cta__form {
-    flex-direction: column;
-    margin-left: 500px;
-    margin-top: -233px;
+    margin-left: auto;
+    margin-right: 0;
     width: 500px;
   }
-
+}
 .phone__number {
   display: flex;
   align-items: center;
