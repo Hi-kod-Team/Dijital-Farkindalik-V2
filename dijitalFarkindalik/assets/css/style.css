@@ -1814,6 +1814,7 @@ h6 {
   padding-top: 20px;
   font-family: sans-serif;
   box-sizing: border-box;
+  background-color:#666;
 }
 
 .login-text {
@@ -1849,6 +1850,7 @@ h6 {
   width: 50%;
   height: auto;
   margin: 20px;
+  margin-bottom: 500px;
   transform-origin: center;
   transition: transform 0.2s ease-out;
 }
@@ -3979,7 +3981,7 @@ h6 {
   background-color: #282828;
 }
 .list-unstyled {
-  margin-top: -33px;
+  margin-top: -10px;
 }
 .cta__form {
   display: flex;
