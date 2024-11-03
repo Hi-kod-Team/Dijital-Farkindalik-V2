@@ -260,13 +260,8 @@ $(function () {
     loadMore('.loadMoreportfolio', '.portfolio-hidden > .portfolio-item');
     loadMore('.loadMoreGallery', '.gallery-hidden > .gallery-img');
 });
-document.getElementById("myButton").addEventListener("click", function() {
-    window.location.href = 'https://giris.turkiye.gov.tr/Giris/SifremiUnuttum';
-});
-document.getElementById("myButton2").addEventListener("click", function() {
-        window.location.href = 'https://giris.turkiye.gov.tr/Giris/e-Devlet-Sifresi';
-});
-const section = document.querySelectorAll('.login');
+
+const section = document.querySelectorAll('.login-wrapper, .comment-wrapper');
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY / (document.body.scrollHeight - window.innerHeight);
     section.forEach((section, index) => {
@@ -274,3 +269,20 @@ window.addEventListener('scroll', () => {
        section.style.transform = `scale(${scale})`;
     });
 });
+
+
+
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault(); 
+    
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const phonenumber = document.getElementById("phonenumber").value;
+    const comment = document.getElementById("comment").value;
+    
+    if (username && email && phonenumber && comment) {
+        alert("Formunuz başarıyla gönderildi!");
+    }
+    else alert('Lütfen tüm alanları doldurunuz! ')
+    });
+
