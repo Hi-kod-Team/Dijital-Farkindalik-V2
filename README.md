@@ -22,7 +22,7 @@ Bu proje, HTML, CSS, JavaScript ve Bootstrap teknolojilerini kullanarak oluştur
 
 ## Projeyi İnceleyin
 
-Dijital farkındalık konusunda daha fazla bilgi edinmek ve projemize göz atmak için [proje bağlantısına gidin](#).
+Dijital farkındalık konusunda daha fazla bilgi edinmek ve projemize göz atmak için https://dijitalfarkindalik.netlify.app/.
 
 ---
 
